@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1511875381 source:c:\users\egill\documents\hr\Önn 1\forritun 1\projects\3vv_vika1_b_v0.04\main.cpp
+	<iostream>
+	"../include/SuperHero.h"
+
+1511875316 c:\users\egill\documents\hr\Önn 1\forritun 1\projects\3vv_vika1_b_v0.04\include\superhero.h
+	<string>
+	<iostream>
+	<fstream>
+	<limits>
+
+1511875630 source:c:\users\egill\documents\hr\Önn 1\forritun 1\projects\3vv_vika1_b_v0.04\src\superhero.cpp
+	"../include/SuperHero.h"
+
