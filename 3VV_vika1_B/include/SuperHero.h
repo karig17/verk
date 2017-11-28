@@ -4,12 +4,15 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <limits>
 using namespace std;
 
 class SuperHero
 {
     private:
-        string heroName;
+        static const int MAX_STRING_LENGTH = 32;
+
+        char heroName[MAX_STRING_LENGTH];
         int heroAge;
         char heroPowerChar;
 
@@ -22,6 +25,8 @@ class SuperHero
         string getName();
         int getAge();
         char getPowerChar();
+
+        void readLines();
 
         void setName(string newName);
         void setAge(int newAge);

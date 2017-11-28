@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/SuperHero.h"
+#include "include/SuperHero.h"
 using namespace std;
 
 int main()
@@ -32,7 +32,7 @@ int main()
         cin >> heros[i];
     }
     fout.open("SuperHeros2.dat", ios::binary|ios::app);
-    fout.write((char*)(&heros), sizeof(SuperHero));
+    fout.write((char*)(heros), n * sizeof(SuperHero));
     fout.close();
 
 
@@ -44,7 +44,7 @@ int main()
 
 
     SuperHero* heros2 = new SuperHero[recordCount];
-    fin.read((char*)(&heros2), sizeof(SuperHero));
+    fin.read((char*)(heros2), recordCount * sizeof(SuperHero));
 
     fin.close();
 

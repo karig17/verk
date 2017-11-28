@@ -12,3 +12,16 @@
 1511875630 source:c:\users\egill\documents\hr\Önn 1\forritun 1\projects\3vv_vika1_b_v0.04\src\superhero.cpp
 	"../include/SuperHero.h"
 
+1511881540 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika1_b_v0.04\main.cpp
+	<iostream>
+	"include/SuperHero.h"
+
+1511875630 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika1_b_v0.04\src\superhero.cpp
+	"../include/SuperHero.h"
+
+1511875316 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika1_b_v0.04\include\superhero.h
+	<string>
+	<iostream>
+	<fstream>
+	<limits>
+

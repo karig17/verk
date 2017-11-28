@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SuperHero.h"
+#include "../include/SuperHero.h"
 using namespace std;
 
 int main()
@@ -7,19 +7,15 @@ int main()
     ifstream fin;
     ofstream fout;
 
-    SuperHero hero("Batman", 32, 'n');
-
-    fin >> hero;
-    cout << hero;
-
-    hero.setAge(99);
-    hero.setPowerChar('f');
-    cout << hero;
+    SuperHero hero;
+    //SuperHero hero("Phill", 39, 'n');
 
     cin >> hero;
 
     fout << hero;
-    cout << hero;
 
+    cout << endl;
+
+    hero.readLines();
     return 0;
 }
