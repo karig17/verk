@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1511957652 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\main.cpp
+1511963432 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\main.cpp
 	<iostream>
 	"MainUI.h"
 
-1511957468 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\mainui.h
+1511963825 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\mainui.h
 
-1511957662 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\mainui.cpp
+1511962902 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\mainui.cpp
 	"MainUI.h"
 
+<<<<<<< HEAD
 1511962546 source:c:\c++\verk\3vv_vika3_pizza_v0.01\main.cpp
 	<iostream>
 
@@ -30,4 +31,32 @@
 	"PizzaUI.h"
 
 1511964059 c:\c++\verk\3vv_vika3_pizza_v0.01\include\pizzaui.h
+=======
+1511960383 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\order.cpp
+	"Order.h"
+
+1511960383 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\order.h
+
+1511960360 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\pizza.cpp
+	"Pizza.h"
+
+1511960360 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\pizza.h
+
+1511960790 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\pizzaui.cpp
+	"PizzaUI.h"
+
+1511960790 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\pizzaui.h
+
+1511960980 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\toppingfilemgr.cpp
+	"ToppingFileMgr.h"
+
+1511960980 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\toppingfilemgr.h
+
+1511963226 source:c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\src\topping.cpp
+	"Topping.h"
+
+1511963403 c:\users\egill\documents\hr\Önn 1\3.viknaverkefni\verk\3vv_vika3_pizza_v0.01\include\topping.h
+	<iostream>
+	<iomanip>
+>>>>>>> ccd01967f94d994fa20ba7400bbc5534323d7d62
 

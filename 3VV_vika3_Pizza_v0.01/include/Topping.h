@@ -10,7 +10,6 @@ class Topping
 {
     public:
         Topping();
-        virtual ~Topping();
 
         friend ostream& operator << (ostream& out, const Topping& topping);
 
