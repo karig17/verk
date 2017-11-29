@@ -5,7 +5,7 @@ Topping::Topping()
     //ctor
 }
 
-Topping::~Topping()
-{
-    //dtor
+ostream& operator << (ostream& out, const Topping& topping) {
+    out << '\t' << setw(topping.MAX_STR_LENGTH) << topping.name << " " << topping.price << endl;
+    return out;
 }
