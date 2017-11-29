@@ -7,27 +7,36 @@ SuperHero::SuperHero() {
 }
 
 SuperHero::SuperHero(string name, int age, char power) {
-    for(int i = 0; i < name.size(); i++) {
-        heroName[i] = name.at(i);
-    }
-    heroName[name.size()] = '\0';       // Adds the esc.character after the end of the string.
-    heroName[31] = '\0';                // Adds the esc.character to the end of the charArray.
+    strToCharArr(name);
     heroAge = age;
     heroPowerChar = power;
 }
 
 
 /// A set of functions that return a SuperHero's aspect in its current state.
-string SuperHero::getName() {
+string SuperHero::getName() const{
     return heroName;
 }
 
-int SuperHero::getAge() {
+int SuperHero::getAge() const{
     return heroAge;
 }
 
-char SuperHero::getPowerChar() {
+char SuperHero::getPowerChar() const{
     return heroPowerChar;
+}
+
+
+/// Converts strings to a character array.
+void SuperHero::strToCharArr(string name) {
+    for(unsigned int i = 0; i < name.size(); i++) {
+        if(i == MAX_STRING_LENGTH -1) {
+            break;
+        }
+        heroName[i] = name.at(i);
+    }
+    heroName[name.size()] = '\0';                   // Adds the esc.character after the end of the string.
+    heroName[MAX_STRING_LENGTH - 1] = '\0';         // Adds the esc.character to the end of the charArray.
 }
 
 
@@ -54,10 +63,7 @@ void SuperHero::readLines() {
 
 /// A set of functions that set a SuperHero's aspect to a given state.
 void SuperHero::setName(string newName) {
-    for(int i = 0; i < newName.size(); i++) {
-        heroName[i] = newName.at(i);
-    }
-    heroName[newName.size()] = '\0';
+    strToCharArr(newName);
 }
 
 void SuperHero::setAge(int newAge) {
@@ -70,8 +76,14 @@ void SuperHero::setPowerChar(char newPowerChar) {
 
 
 /// Returns the Superpower associated with a power character.
-string SuperHero::heroPower() const {
-           if(heroPowerChar == 'e') {
+string SuperHero::getHeroPower() const {
+           if(heroPowerChar == 'a') {
+        return "Armour";
+    } else if(heroPowerChar == 'b') {
+        return "Boy wonder";
+    } else if(heroPowerChar == 'c') {
+        return "Crime fighter";
+    } else if(heroPowerChar == 'e') {
         return "Electric";
     } else if(heroPowerChar == 'f') {
         return "Flying";
@@ -81,22 +93,32 @@ string SuperHero::heroPower() const {
         return "Hacker";
     } else if(heroPowerChar == 'i') {
         return "Ice";
+    } else if(heroPowerChar == 'j') {
+        return "Jedi";
+    } else if(heroPowerChar == 'k') {
+        return "Killer";
     } else if(heroPowerChar == 'n') {
         return "None";
     } else if(heroPowerChar == 'r') {
         return "Rich";
     } else if(heroPowerChar == 's') {
         return "Strong";
+    } else if(heroPowerChar == 't') {
+        return "Totally not Batman";
     } else {
         return "Weakling";
     }
 }
 
-
 /// Overloads the >> operator so one can read in a SuperHero from the console.
 istream& operator >> (istream& in, SuperHero& hero) {
+    string nameStr;
     cout << "Enter name:  ";
-    cin >> hero.heroName;
+    cin >> ws;
+    getline(cin, nameStr);
+
+    hero.strToCharArr(nameStr);
+
     cout << "Enter age:   ";
     cin >> hero.heroAge;
     cout << "Enter Power: ";
@@ -106,11 +128,9 @@ istream& operator >> (istream& in, SuperHero& hero) {
 
 /// Overloads the << operator so one can write out a SuperHero to the console.
 ostream& operator << (ostream& out, const SuperHero& hero) {
-    cout << hero.heroName << " (" << hero.heroAge << "): " << hero.heroPower() << endl;
+    cout << hero.heroName << " (" << hero.heroAge << "): " << hero.getHeroPower() << endl;
     return out;
 }
-
-
 
 /// Overloads the >> operator so one can read in a SuperHero from a file.
 ifstream& operator >> (ifstream& fin, SuperHero& hero) {

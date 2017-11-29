@@ -7,14 +7,14 @@ int main()
     ifstream fin;
     ofstream fout;
 
+    /// Vika 1, b) i)
+
     SuperHero hero;                         // The default constructor.
-    //SuperHero hero("Phill", 39, 'n');     // The constructor with variables.
+    //SuperHero hero("Phillip", 39, 'n');   // The constructor with variables.
 
     /// Receives input for a new hero.
     cout << "Enter information about a super hero:" << endl;
     cin >> hero;
-
-    hero.setName("Günter");
 
     /// Writes the hero to a file.
     fout << hero;
@@ -30,6 +30,7 @@ int main()
     ///=========================================================
 
 
+    /// Vika 2, b) ii)
 
     /// Receives and verifies input for the number of new heros.
     int n = 0;

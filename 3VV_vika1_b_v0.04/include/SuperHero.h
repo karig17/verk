@@ -16,18 +16,19 @@ class SuperHero
         int heroAge;
         char heroPowerChar;
 
-        /// Returns the Superpower associated with a power character.
-        string heroPower() const;
-
     public:
         SuperHero();
         SuperHero(string name, int age, char power);
 
         /// A set of functions that get a SuperHero's aspect in it's current state.
-        string getName();
-        int getAge();
-        char getPowerChar();
+        string getName() const;
+        int getAge() const;
+        char getPowerChar() const;
+        /// Returns the Superpower associated with a power character.
+        string getHeroPower() const;
 
+
+        void strToCharArr(string name);
         /// Writes out all of the SuperHeros from a file to the console.
         void readLines();
 
